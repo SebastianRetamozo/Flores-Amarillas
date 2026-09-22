@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas Para Ti</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center relative">
+
+    <!-- Contenedor de pétalos de fondo (Generados por JS) -->
+    <div id="petals-container" class="absolute inset-0 pointer-events-none z-0"></div>
+
+    <!-- Contenido Principal -->
+    <div class="relative z-20 flex flex-col items-center text-center px-4 max-w-2xl mx-auto mt-10 md:mt-0">
+        
+        <h2 class="text-lg md:text-xl text-yellow-500 tracking-[0.3em] uppercase mb-3">21 de Septiembre</h2>
+        <h1 class="text-6xl md:text-7xl font-cursive glow-text mb-6 text-yellow-300">
+            Un regalo para ti
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-yellow-100/90 mb-12 italic font-light">
+            "Un regalo para mi Stacy"
+        </p>
+
+        <!-- Flor Interactiva -->
+        <div class="flower-container flower-wrapper mb-6" id="flowerBtn" onclick="openLetter()">
+            <div class="sparkle-container" aria-hidden="true"></div>
+
+            <svg class="side-flower left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <use href="#flowerShape" />
+            </svg>
+
+            <svg class="flower-svg main-flower" width="220" height="220" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#5a2a18"/>
+                        <stop offset="100%" stop-color="#2c1208"/>
+                    </radialGradient>
+                    <linearGradient id="petalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ffe600"/>
+                        <stop offset="100%" stop-color="#ff9100"/>
+                    </linearGradient>
+                    <linearGradient id="yellow-grad-light" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#fef08a;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#eab308;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="yellow-grad-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#fde047;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
+                    </linearGradient>
+
+                    <g id="flowerShape">
+                        <g>
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(0 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(45 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(90 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(135 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(180 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(225 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(270 100 100)" />
+                            <path d="M100 15 C115 45, 120 80, 100 100 C80 80, 85 45, 100 15 Z" fill="url(#yellow-grad-dark)" transform="rotate(315 100 100)" />
+                        </g>
+                        <g>
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(22.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(67.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(112.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(157.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(202.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(247.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(292.5 100 100)" />
+                            <path d="M100 25 C110 50, 115 85, 100 100 C85 85, 90 50, 100 25 Z" fill="url(#yellow-grad-light)" transform="rotate(337.5 100 100)" />
+                        </g>
+                        <circle cx="100" cy="100" r="28" fill="#5c3a21" />
+                        <circle cx="100" cy="100" r="22" fill="#4a2c16" stroke="#854d0e" stroke-width="3" stroke-dasharray="3,3"/>
+                        <circle cx="100" cy="100" r="12" fill="#3f2310" />
+                    </g>
+                </defs>
+
+                <circle cx="100" cy="100" r="45" fill="rgba(0,0,0,0.4)" filter="blur(15px)"/>
+                <use href="#flowerShape" />
+            </svg>
+
+            <svg class="side-flower right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <use href="#flowerShape" />
+            </svg>
+        </div>
+        
+        <p class="text-yellow-400/80 uppercase tracking-widest text-sm click-hint mt-2">Haz clic en la flor</p>
+    </div>
+
+    <!-- Modal de la Carta (Oculto por defecto) -->
+    <div id="letter-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden opacity-0 modal-transition bg-black/60 backdrop-blur-sm">
+        
+        <div id="letter-box" class="letter-bg text-gray-800 p-8 md:p-12 rounded-lg max-w-lg w-full relative scale-90 box-transition border-4 border-yellow-500/30">
+            
+            <!-- Decoración esquina superior izquierda -->
+            <svg class="absolute top-4 left-4 w-12 h-12 text-yellow-500/50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 9 12 15 12 15C12 15 16.5 9 16.5 6.5C16.5 4 14.5 2 12 2Z" transform="rotate(-45 12 12)"/>
+                <path d="M12 9C9.5 9 7.5 11 7.5 13.5C7.5 16 12 22 12 22C12 22 16.5 16 16.5 13.5C16.5 11 14.5 9 12 9Z" transform="rotate(-45 12 12)"/>
+            </svg>
+
+            <!-- Decoración esquina inferior derecha -->
+            <svg class="absolute bottom-4 right-4 w-12 h-12 text-yellow-500/50 transform rotate-180" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 9 12 15 12 15C12 15 16.5 9 16.5 6.5C16.5 4 14.5 2 12 2Z" transform="rotate(-45 12 12)"/>
+                <path d="M12 9C9.5 9 7.5 11 7.5 13.5C7.5 16 12 22 12 22C12 22 16.5 16 16.5 13.5C16.5 11 14.5 9 12 9Z" transform="rotate(-45 12 12)"/>
+            </svg>
+
+            <!-- Contenido de la Carta -->
+            <div class="relative z-10 text-center">
+                <h3 class="font-cursive text-4xl text-yellow-600 mb-6">Mi Amor...</h3>
+                
+                <div class="space-y-4 text-lg md:text-xl leading-relaxed text-gray-700">
+                    <p>
+                        Dicen que regalar flores amarillas significa una promesa de amor sincero, puro y duradero. Representan el deseo de pasar la vida entera junto a esa persona especial.
+                    </p>
+                    <p>
+                        Hoy, 21 de septiembre, quiero dedicarte esta flor. Aunque sea digital, lleva consigo todo mi cariño, mi admiración y mi promesa de cuidarte siempre.
+                    </p>
+                    <p class="font-semibold text-yellow-700 italic">
+                        Gracias por hacer que mis días brillen tanto como el sol. Te amo.
+                    </p>
+                </div>
+
+                <button onclick="closeLetter()" class="mt-8 px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-full transition-colors shadow-md">
+                    Cerrar Carta
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
